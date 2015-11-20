@@ -5,7 +5,6 @@ using System.Collections;
 public class CameraSize : MonoBehaviour {
 
 	//Done!
-
 	Camera cam;
 	public float targetaspect;
 

@@ -1,13 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
 [ExecuteInEditMode]
 public class Materialfarbe : MonoBehaviour {
 
 	public Color color = Color.red;
 	protected Color oldColor;
 	protected Material oldMaterial;
-	public Material materialToUse;
+	public Material materialToUse = null;
 
 	protected MeshRenderer meshRenderer;
 
@@ -18,6 +19,9 @@ public class Materialfarbe : MonoBehaviour {
 	}
 	
 	public void ChangeColor() {
+		if(materialToUse == null)
+			return;
+
 		Material mat = new Material(materialToUse);
 
 		if (Application.isPlaying)
@@ -41,6 +45,10 @@ public class Materialfarbe : MonoBehaviour {
 	}
 
 	void OnDestroy() {
+		if (Application.isPlaying)
+			Destroy(meshRenderer.material);
 
+		if (Application.isEditor)
+			DestroyImmediate(meshRenderer.material);
 	}
 }
