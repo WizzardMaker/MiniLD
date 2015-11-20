@@ -17,4 +17,8 @@ public class AI: MonoBehaviour {
 		if(isPlayer)
 			cc.SimpleMove(transform.forward * (geschwindigkeit * Input.GetAxisRaw("Vertical")));
 	}
+
+	void CheckSelected() {
+
+	}
 }
