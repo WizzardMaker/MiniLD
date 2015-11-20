@@ -20,7 +20,17 @@ public class CameraMovement : MonoBehaviour {
 	}
 	
 	public void ChangeCamera() {
+		if(GameManager.Mode == Modes.RTS) {
+			transform.position = oldPos;
+			transform.localRotation = Quaternion.Euler(45, 0, 0);
+			Debug.Log("Change!");
 
+
+		} else {
+
+
+
+		}
 	}
 
 	// Update is called once per frame
@@ -31,11 +41,8 @@ public class CameraMovement : MonoBehaviour {
 				transform.rotation = Quaternion.Euler(fixRotY ? StandardFunktionen.ConvertVector3(target.rotation.eulerAngles, true, 0, false, 0, true, 0) + RotOffset : target.rotation.eulerAngles + RotOffset);
 			}
 		}else if(GameManager.Mode == Modes.RTS) {
-			if (transform.position == oldPos)
-				return;
 
 			transform.position += transform.forward * (Input.GetAxisRaw("Mouse ScrollWheel") * zoomGeschwindigkeit);
-			bool maxZoom = false;
 			RaycastHit info;
 			if(Physics.Raycast(new Ray(transform.position,transform.forward),out info, Mathf.Infinity,1<<8)) {
 				if (Vector3.Distance(info.point, transform.position) <= maxDistance)
@@ -45,7 +52,7 @@ public class CameraMovement : MonoBehaviour {
 			Debug.Log(Vector3.Distance(info.point, transform.position));
 
 			transform.position += Vector3.right * (geschwindigkeit * Input.GetAxisRaw("Horizontal")) + Vector3.forward * (geschwindigkeit * Input.GetAxisRaw("Vertical"));
-
+			oldPos = transform.position;
 		}
 	}
 }
