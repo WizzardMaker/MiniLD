@@ -49,7 +49,7 @@ public class CameraMovement : MonoBehaviour {
 					transform.position -= (transform.forward * (maxDistance - Vector3.Distance(info.point, transform.position)));
 
 			}
-			Debug.Log(Vector3.Distance(info.point, transform.position));
+			//Debug.Log(Vector3.Distance(info.point, transform.position));
 
 			transform.position += Vector3.right * (geschwindigkeit * Input.GetAxisRaw("Horizontal")) + Vector3.forward * (geschwindigkeit * Input.GetAxisRaw("Vertical"));
 			oldPos = transform.position;

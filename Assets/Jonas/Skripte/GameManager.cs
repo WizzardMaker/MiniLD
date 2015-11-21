@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour {
 	Vector3 firstMousePos = new Vector3(-1,-1,-1),lastMousePos = new Vector3(-1,-1,-1);
 	bool selectingSquare;
 
-	public Rect selection;
+	public static Rect selection;
 	public Texture2D selectionTexture;
 
 	static Modes mode = Modes.RTS;
