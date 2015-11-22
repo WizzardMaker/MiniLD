@@ -7,6 +7,8 @@ public class CameraSize : MonoBehaviour {
 	//Done!
 	Camera cam;
 	public float targetaspect;
+	public static Rect rect;
+	public static bool letterbox;
 
 	// Use this for initialization
 	// Use this for initialization
@@ -28,8 +30,9 @@ public class CameraSize : MonoBehaviour {
 		
 		// if scaled height is less than current height, add letterbox
 		if (scaleheight < 1.0f)
-		{  
-			Rect rect = camera.rect;
+		{
+			letterbox = true;
+			rect = camera.rect;
 			
 			rect.width = 1.0f;
 			rect.height = scaleheight;
@@ -40,6 +43,7 @@ public class CameraSize : MonoBehaviour {
 		}
 		else // add pillarbox
 		{
+			letterbox = false;
 			float scalewidth = 1.0f / scaleheight;
 			
 			Rect rect = camera.rect;

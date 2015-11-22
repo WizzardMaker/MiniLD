@@ -104,8 +104,10 @@ public class AI: MonoBehaviour {
 	void OnGUI() {
 		if (!isSelected)
 			return;
+
+		GUI.depth = 1;
 		GUI.color = Color.green;
 		GUI.DrawTexture(new Rect(StandardFunktionen.ConvertVector3(Camera.main.WorldToScreenPoint(transform.position), false, 0, true, GameManager.PixelToRect(Camera.main.WorldToScreenPoint(transform.position).y)) - Vector3.one * 20, Vector3.one * 40), selected);
-
+		
 	}
 }
