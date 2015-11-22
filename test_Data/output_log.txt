@@ -2,9 +2,9 @@ Mono path[0] = 'C:/Users/Jonas/Documents/MiniLD/test_Data/Managed'
 Mono path[1] = 'C:/Users/Jonas/Documents/MiniLD/test_Data/Mono'
 Mono config path = 'C:/Users/Jonas/Documents/MiniLD/test_Data/Mono/etc'
 PlayerConnection initialized from C:/Users/Jonas/Documents/MiniLD/test_Data (debug = 0)
-PlayerConnection initialized network socket : 0.0.0.0 55391
-Multi-casting "[IP] 192.168.0.2 [Port] 55391 [Flags] 2 [Guid] 3378158313 [EditorId] 2922058383 [Version] 1048832 [Id] WindowsPlayer(Jonas-PC) [Debug] 0" to [225.0.0.222:54997]...
-PlayerConnection already initialized - listening to [192.168.0.2:55391]
+PlayerConnection initialized network socket : 0.0.0.0 55277
+Multi-casting "[IP] 192.168.0.2 [Port] 55277 [Flags] 2 [Guid] 1547027407 [EditorId] 3869084622 [Version] 1048832 [Id] WindowsPlayer(Jonas-PC) [Debug] 0" to [225.0.0.222:54997]...
+PlayerConnection already initialized - listening to [192.168.0.2:55277]
 Initialize engine version: 5.1.1f1 (2046fc06d4d8)
 GfxDevice: creating device client; threaded=1
 Direct3D:
@@ -23,12 +23,7 @@ Platform assembly: C:\Users\Jonas\Documents\MiniLD\test_Data\Managed\UnityEngine
 Loading C:\Users\Jonas\Documents\MiniLD\test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\Jonas\Documents\MiniLD\test_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
 Loading C:\Users\Jonas\Documents\MiniLD\test_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.077 seconds
+- Completed reload, in  0.069 seconds
 desktop: 1680x1050 59Hz; virtual: 2960x1050 at -1280,0
 <RI> Initializing input.
 <RI> Input initialized.
-<RI> Initialized touch support.
-Platform assembly: C:\Users\Jonas\Documents\MiniLD\test_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\Jonas\Documents\MiniLD\test_Data\Managed\System.dll (this message is harmless)
-Setting up 1 worker threads for Enlighten.
-  Thread -> id: 2398 -> priority: 1 
