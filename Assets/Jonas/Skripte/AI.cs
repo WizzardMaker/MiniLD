@@ -81,7 +81,7 @@ public class AI: MonoBehaviour {
 	void CheckSelected() {
 		//Debug.Log(StandardFunktionen.ConvertVector3(Camera.main.WorldToScreenPoint(transform.position), false, 0, true, GameManager.PixelToRect(Camera.main.WorldToScreenPoint(transform.position).y), false));//Camera.main.WorldToScreenPoint(transform.position));
 		
-		if (Input.GetMouseButton(0) && GetComponent<Renderer>().isVisible) {
+		if (Input.GetMouseButton(0)) {
 			if (GameManager.selection.Contains((StandardFunktionen.ConvertVector3(Camera.main.WorldToScreenPoint(transform.position), false, 0, true, GameManager.PixelToRect(Camera.main.WorldToScreenPoint(transform.position).y), false)))) {
 				isSelected = true;
             } else {
