@@ -6,6 +6,9 @@ public class AI: MonoBehaviour {
 	public float geschwindigkeit;
 	public bool isPlayer = false;
 	protected CharacterController cc;
+
+	Animator anim;
+
 	public Texture2D selected;
 	bool isSelected = false;
 
@@ -17,6 +20,7 @@ public class AI: MonoBehaviour {
 	void Start () {
 		cc = GetComponent<CharacterController>();
 		waypoint = transform.GetChild(0);
+		anim = GetComponent<Animator>();
 	}
 
 	void GetGoal() {
@@ -70,7 +74,9 @@ public class AI: MonoBehaviour {
 	}
 	
 	void CheckMovement() {
-		
+		Debug.Log(GetComponent<NavMeshAgent>().velocity.magnitude);
+		anim.SetBool("moves", GetComponent<NavMeshAgent>().velocity.magnitude >= 1f);
+
 		if (Input.GetMouseButtonUp(1) && isSelected) {
 			GetGoal();
         }

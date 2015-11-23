@@ -37,7 +37,7 @@ public class Materialfarbe : MonoBehaviour {
 	}
 
 	// Update is called once per frame
-	void OnGUI () {
+	void Update () {
 		if (color == oldColor && materialToUse == oldMaterial)
 			return;
 
